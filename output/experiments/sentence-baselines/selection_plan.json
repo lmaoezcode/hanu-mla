@@ -1,0 +1,190 @@
+{
+  "created_utc": "2026-10-04T12:23:34.837632+00:00",
+  "seed": 20261004,
+  "label_order": [
+    "A1",
+    "A2",
+    "B1",
+    "B2",
+    "C1",
+    "C2"
+  ],
+  "selection_rule": "Maximum validation QWK, then lower validation MAE, then higher macro-F1, then first grid entry",
+  "awl_grid": [
+    {
+      "max_leaf_nodes": 2,
+      "min_samples_leaf": 50,
+      "class_weight": null
+    },
+    {
+      "max_leaf_nodes": 2,
+      "min_samples_leaf": 50,
+      "class_weight": "balanced"
+    },
+    {
+      "max_leaf_nodes": 2,
+      "min_samples_leaf": 100,
+      "class_weight": null
+    },
+    {
+      "max_leaf_nodes": 2,
+      "min_samples_leaf": 100,
+      "class_weight": "balanced"
+    },
+    {
+      "max_leaf_nodes": 2,
+      "min_samples_leaf": 200,
+      "class_weight": null
+    },
+    {
+      "max_leaf_nodes": 2,
+      "min_samples_leaf": 200,
+      "class_weight": "balanced"
+    },
+    {
+      "max_leaf_nodes": 3,
+      "min_samples_leaf": 50,
+      "class_weight": null
+    },
+    {
+      "max_leaf_nodes": 3,
+      "min_samples_leaf": 50,
+      "class_weight": "balanced"
+    },
+    {
+      "max_leaf_nodes": 3,
+      "min_samples_leaf": 100,
+      "class_weight": null
+    },
+    {
+      "max_leaf_nodes": 3,
+      "min_samples_leaf": 100,
+      "class_weight": "balanced"
+    },
+    {
+      "max_leaf_nodes": 3,
+      "min_samples_leaf": 200,
+      "class_weight": null
+    },
+    {
+      "max_leaf_nodes": 3,
+      "min_samples_leaf": 200,
+      "class_weight": "balanced"
+    },
+    {
+      "max_leaf_nodes": 6,
+      "min_samples_leaf": 50,
+      "class_weight": null
+    },
+    {
+      "max_leaf_nodes": 6,
+      "min_samples_leaf": 50,
+      "class_weight": "balanced"
+    },
+    {
+      "max_leaf_nodes": 6,
+      "min_samples_leaf": 100,
+      "class_weight": null
+    },
+    {
+      "max_leaf_nodes": 6,
+      "min_samples_leaf": 100,
+      "class_weight": "balanced"
+    },
+    {
+      "max_leaf_nodes": 6,
+      "min_samples_leaf": 200,
+      "class_weight": null
+    },
+    {
+      "max_leaf_nodes": 6,
+      "min_samples_leaf": 200,
+      "class_weight": "balanced"
+    }
+  ],
+  "lr_grid": [
+    {
+      "C": 0.1,
+      "min_df": 1
+    },
+    {
+      "C": 0.1,
+      "min_df": 2
+    },
+    {
+      "C": 1.0,
+      "min_df": 1
+    },
+    {
+      "C": 1.0,
+      "min_df": 2
+    },
+    {
+      "C": 10.0,
+      "min_df": 1
+    },
+    {
+      "C": 10.0,
+      "min_df": 2
+    }
+  ],
+  "fixed_lr": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 30000,
+    "max_df": 1.0,
+    "sublinear_tf": true,
+    "class_weight": "balanced",
+    "solver": "lbfgs",
+    "penalty": "l2",
+    "max_iter": 2000
+  },
+  "test_not_used_for_selection": true,
+  "input_manifest": [
+    {
+      "path": "data\\cefr-sp\\cefr-sp.json",
+      "sha256": "0456ee315659418fa39c48883b05972eebcefcc0a00b4e8cadb06f0ac02df25c",
+      "bytes": 3353222,
+      "url": "https://huggingface.co/datasets/UniversalCEFR/cefr_sp_en/resolve/main/cefr-sp.json"
+    },
+    {
+      "path": "data\\cefr-sp\\official\\score_train.txt",
+      "sha256": "d98593b16b6ebaec5e7540aa2757d5ccfb733e35f8a2947a2b5e1066da6be0af",
+      "bytes": 56206,
+      "url": "https://raw.githubusercontent.com/yukiar/CEFR-SP/main/CEFR-SP/SCoRE/CEFR-SP_SCoRE_train.txt"
+    },
+    {
+      "path": "data\\cefr-sp\\official\\wiki_train.txt",
+      "sha256": "f431fbeae144844c929ddff594ae7a7ac927469478a9b524738d81e7f2759c48",
+      "bytes": 565805,
+      "url": "https://raw.githubusercontent.com/yukiar/CEFR-SP/main/CEFR-SP/Wiki-Auto/CEFR-SP_Wikiauto_train.txt"
+    },
+    {
+      "path": "data\\cefr-sp\\official\\score_dev.txt",
+      "sha256": "693ecb9235eaf0f95f4118722c54d0b0e57f94e94fd962bda3c366a53434f3fe",
+      "bytes": 36956,
+      "url": "https://raw.githubusercontent.com/yukiar/CEFR-SP/main/CEFR-SP/SCoRE/CEFR-SP_SCoRE_dev.txt"
+    },
+    {
+      "path": "data\\cefr-sp\\official\\wiki_dev.txt",
+      "sha256": "e5aaf45e7cba02ae6785716d12c799c1f73e08942d7e2ee36145fdc4bfb8dcf6",
+      "bytes": 68423,
+      "url": "https://raw.githubusercontent.com/yukiar/CEFR-SP/main/CEFR-SP/Wiki-Auto/CEFR-SP_Wikiauto_dev.txt"
+    },
+    {
+      "path": "data\\cefr-sp\\official\\score_test.txt",
+      "sha256": "c272361239443952ab880d1bb7ab1ca8b5debbc5402bf880973b60f5d9fda6bd",
+      "bytes": 39826,
+      "url": "https://raw.githubusercontent.com/yukiar/CEFR-SP/main/CEFR-SP/SCoRE/CEFR-SP_SCoRE_test.txt"
+    },
+    {
+      "path": "data\\cefr-sp\\official\\wiki_test.txt",
+      "sha256": "edefde3a3686e9f6fea9c738fde6628ab8fc26a6b5797f75023a274d76cc278a",
+      "bytes": 74999,
+      "url": "https://raw.githubusercontent.com/yukiar/CEFR-SP/main/CEFR-SP/Wiki-Auto/CEFR-SP_Wikiauto_test.txt"
+    }
+  ],
+  "metadata_verified_utc": "2026-10-04T12:31:07.460741+00:00"
+}

@@ -1,0 +1,109 @@
+{
+  "input_manifest": [
+    {
+      "path": "data\\cefr-sp\\cefr-sp.json",
+      "sha256": "0456ee315659418fa39c48883b05972eebcefcc0a00b4e8cadb06f0ac02df25c",
+      "bytes": 3353222,
+      "url": "https://huggingface.co/datasets/UniversalCEFR/cefr_sp_en/resolve/main/cefr-sp.json"
+    },
+    {
+      "path": "data\\cefr-sp\\official\\score_train.txt",
+      "sha256": "d98593b16b6ebaec5e7540aa2757d5ccfb733e35f8a2947a2b5e1066da6be0af",
+      "bytes": 56206,
+      "url": "https://raw.githubusercontent.com/yukiar/CEFR-SP/main/CEFR-SP/SCoRE/CEFR-SP_SCoRE_train.txt"
+    },
+    {
+      "path": "data\\cefr-sp\\official\\wiki_train.txt",
+      "sha256": "f431fbeae144844c929ddff594ae7a7ac927469478a9b524738d81e7f2759c48",
+      "bytes": 565805,
+      "url": "https://raw.githubusercontent.com/yukiar/CEFR-SP/main/CEFR-SP/Wiki-Auto/CEFR-SP_Wikiauto_train.txt"
+    },
+    {
+      "path": "data\\cefr-sp\\official\\score_dev.txt",
+      "sha256": "693ecb9235eaf0f95f4118722c54d0b0e57f94e94fd962bda3c366a53434f3fe",
+      "bytes": 36956,
+      "url": "https://raw.githubusercontent.com/yukiar/CEFR-SP/main/CEFR-SP/SCoRE/CEFR-SP_SCoRE_dev.txt"
+    },
+    {
+      "path": "data\\cefr-sp\\official\\wiki_dev.txt",
+      "sha256": "e5aaf45e7cba02ae6785716d12c799c1f73e08942d7e2ee36145fdc4bfb8dcf6",
+      "bytes": 68423,
+      "url": "https://raw.githubusercontent.com/yukiar/CEFR-SP/main/CEFR-SP/Wiki-Auto/CEFR-SP_Wikiauto_dev.txt"
+    },
+    {
+      "path": "data\\cefr-sp\\official\\score_test.txt",
+      "sha256": "c272361239443952ab880d1bb7ab1ca8b5debbc5402bf880973b60f5d9fda6bd",
+      "bytes": 39826,
+      "url": "https://raw.githubusercontent.com/yukiar/CEFR-SP/main/CEFR-SP/SCoRE/CEFR-SP_SCoRE_test.txt"
+    },
+    {
+      "path": "data\\cefr-sp\\official\\wiki_test.txt",
+      "sha256": "edefde3a3686e9f6fea9c738fde6628ab8fc26a6b5797f75023a274d76cc278a",
+      "bytes": 74999,
+      "url": "https://raw.githubusercontent.com/yukiar/CEFR-SP/main/CEFR-SP/Wiki-Auto/CEFR-SP_Wikiauto_test.txt"
+    }
+  ],
+  "target_definition": "Higher of the two expert labels, matching every HF record",
+  "hf_official_multiset_match": true,
+  "raw_split_counts": {
+    "train": 7178,
+    "dev": 1366,
+    "test": 1460
+  },
+  "used_split_counts": {
+    "train": 7177,
+    "dev": 1366,
+    "test": 1460
+  },
+  "removed_duplicates": [
+    {
+      "removed_id": "wiki_train_1907",
+      "retained_id": "wiki_train_1906",
+      "text": "At 10.00 am there was a large crowd of people watching the action .",
+      "cefr_level": "B1",
+      "retained_annotators": [
+        2,
+        2
+      ],
+      "removed_annotators": [
+        2,
+        2
+      ]
+    }
+  ],
+  "exact_cross_split_overlaps": {
+    "train_dev": 0,
+    "train_test": 0,
+    "dev_test": 0
+  },
+  "public_label_distribution": {
+    "A1": 124,
+    "A2": 1271,
+    "B1": 3305,
+    "B2": 3330,
+    "C1": 1744,
+    "C2": 230
+  },
+  "annotator_exact_agreement": 0.41433426629348263,
+  "annotator_distance_counts": {
+    "0": 4145,
+    "1": 5859
+  },
+  "tokenizer": "[A-Za-z]+(?:['-][A-Za-z]+)*",
+  "word_length": {
+    "min": 2,
+    "max": 31,
+    "mean": 13.020391843262695,
+    "median": 12.0
+  },
+  "space_token_length": {
+    "min": 5,
+    "max": 34,
+    "mean": 14.782586965213914,
+    "median": 14.0
+  },
+  "length_unit_note": "The earlier 5-34 range and 14.8 mean count whitespace tokens, including punctuation and numerals. Alphabetic word tokens under this experiment's explicit regex have range 2-31 and mean 13.0; the figures are not interchangeable.",
+  "rare_word_definition": "Fraction of word tokens with document frequency <= 5 in deduplicated train, including unseen tokens; this is corpus-relative rarity, not learner familiarity.",
+  "annotation_caution": "41.4% agreement pertains to the filtered public subset. The original study excluded larger disagreements; it is not the raw annotation agreement.",
+  "leakage_caution": "Exact overlaps were checked here. Near-similarity separation relies on the authors' split design; absent document IDs, this is not a claim of complete document-level leakage prevention."
+}

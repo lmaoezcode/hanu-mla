@@ -1,0 +1,59 @@
+{
+  "selected_utc": "2026-10-04T12:23:47.368592+00:00",
+  "majority_label": "B2",
+  "majority_target": 3,
+  "majority_validation": {
+    "qwk": 0.0,
+    "mae": 0.9282576866764275,
+    "macro_f1": 0.07535410764872522,
+    "accuracy": 0.29209370424597364
+  },
+  "awl": {
+    "family": "awl",
+    "config": {
+      "max_leaf_nodes": 6,
+      "min_samples_leaf": 100,
+      "class_weight": "balanced"
+    },
+    "validation": {
+      "qwk": 0.22775883197969538,
+      "mae": 1.863103953147877,
+      "macro_f1": 0.08452754788815851,
+      "accuracy": 0.10834553440702782
+    }
+  },
+  "tfidf_lr": {
+    "family": "tfidf_lr",
+    "config": {
+      "C": 10.0,
+      "min_df": 1
+    },
+    "validation": {
+      "qwk": 0.622948951280581,
+      "mae": 0.6925329428989752,
+      "macro_f1": 0.31514392987832096,
+      "accuracy": 0.40775988286969256
+    },
+    "fit_seconds": 3.952999999979511,
+    "feature_count": 30000,
+    "iterations": 160
+  },
+  "test_evaluated": true,
+  "train_class_counts": {
+    "A1": 47,
+    "A2": 959,
+    "B1": 2244,
+    "B2": 2472,
+    "C1": 1364,
+    "C2": 91
+  },
+  "train_class_weights": {
+    "A1": 25.45035460992908,
+    "A2": 1.2473062217587765,
+    "B1": 0.5330510992275698,
+    "B2": 0.48388619201725996,
+    "C1": 0.8769550342130987,
+    "C2": 13.144688644688644
+  },
+  "test_evaluated_utc": "2026-10-04T12:26:31.598576+00:00"
+}

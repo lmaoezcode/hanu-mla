@@ -1,0 +1,18 @@
+[
+  {
+    "filename": "awl-families.pdf",
+    "url": "https://www.wgtn.ac.nz/lals/resources/academicwordlist/publications/awlsublists1.pdf",
+    "resolved_url": "https://www.wgtn.ac.nz/lals/resources/academicwordlist/publications/awlsublists1.pdf",
+    "retrieved_utc": "2026-10-04T12:16:54.583707+00:00",
+    "sha256": "41c14948c670ff14f5b3a08f033805a8897f73125dac3d78b77b26e2012593ed",
+    "bytes": 286011
+  },
+  {
+    "filename": "awl-headwords.pdf",
+    "url": "https://www.wgtn.ac.nz/lals/resources/academicwordlist/awl-headwords/Headwords-of-the-Academic-Word-List.pdf",
+    "resolved_url": "https://www.wgtn.ac.nz/lals/resources/academicwordlist/awl-headwords/Headwords-of-the-Academic-Word-List.pdf",
+    "retrieved_utc": "2026-10-04T12:16:54.897142+00:00",
+    "sha256": "66a54df3d2881921d42704d20e2524c36c2c454fcf3f816170eb06036cf6209b",
+    "bytes": 109076
+  }
+]

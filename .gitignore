@@ -1,0 +1,17 @@
+# Virtual environments / caches
+.venv*/
+__pycache__/
+*.pyc
+node_modules/
+
+# Temporary and render scratch
+tmp/
+.chart-data-*/
+.codex-*/
+*.inspect.ndjson
+
+# OS / editor
+Thumbs.db
+.DS_Store
+.vscode/
+.claude/
