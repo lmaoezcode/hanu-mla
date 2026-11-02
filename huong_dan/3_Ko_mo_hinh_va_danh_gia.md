@@ -1,13 +1,14 @@
 # File của Ko: mô hình và đánh giá
 
-**Khoảng 2 giờ, đọc sau file `00`.** Mỗi mục có bài tự làm, đáp án ở cuối. Hãy tự làm trước khi xem.
+**Đọc sau file `2_chung_Ka_Ko`, khoảng 2 giờ.** Bạn phụ trách mô hình chính và cách chấm điểm.
 
-**Phần việc của Ko:**
+> **Tối nay bạn cần làm được 3 việc:**
+>
+> 1. Lần theo một câu thật từ TF-IDF đến dự đoán của LR.
+> 2. Tính tay recall, precision, MAE từ bảng kết quả.
+> 3. Kể được controlled check và một ca lỗi của LR.
 
-- TF-IDF + Logistic Regression.
-- Thước đo và so sánh.
-- Controlled check.
-- Ca lỗi của LR.
+Mỗi mục có bài tự làm, đáp án ở cuối. Hãy tự làm trước khi xem.
 
 ## 1. Biến chữ thành số: TF-IDF (25 phút)
 
@@ -252,7 +253,7 @@ Giống như một lớp giỏi và một lớp yếu: cả trường có vẻ p
 
 ## 5. Controlled check và ca lỗi (20 phút)
 
-Đọc phần 1, 3, 6 của file `03`.
+Đọc phần 1, 3, 6 của file `4_bang_ca_loi`.
 
 Tập nói controlled check theo 5 bước:
 
@@ -288,7 +289,7 @@ Tự nói thành tiếng, mỗi câu khoảng 1 phút, mở file bằng chứng 
 | Vì sao chọn TF-IDF + LR? | Hợp từ vựng, dữ liệu thưa, xem được hệ số; giới hạn về thứ tự từ | `lr_top_coefficients.csv` |
 | Đổi tiền xử lý thì sao, kiểm tra thế nào? | Bỏ bigram hoặc đổi `C`, so trên dev, không dùng test | `validation_candidates.json` |
 | Bằng chứng LR tốt hơn baseline? | Cùng tập test, QWK, MAE, kèm giới hạn A1, C2 | `test_metrics.csv` |
-| Một ca lỗi? | Quan sát, giả thuyết chưa kiểm tra, bước tiếp theo | File `03` |
+| Một ca lỗi? | Quan sát, giả thuyết chưa kiểm tra, bước tiếp theo | File `4_bang_ca_loi` |
 | Em tự kiểm tra được gì ngay bây giờ? | Tính recall từ ma trận, dò một câu | Giấy, `.bat` |
 
 **Hai giới hạn nên tự nói được:** xác suất chưa hiệu chỉnh; QWK chung có thể chứa khác biệt nguồn.

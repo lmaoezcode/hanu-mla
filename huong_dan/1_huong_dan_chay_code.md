@@ -37,7 +37,7 @@ Trong `output\experiments\sentence-baselines\`:
 | `awl_tree_rules.txt` | Luật của cây |
 | `verification.json` | Kết quả kiểm chứng |
 
-Trong `output\experiments\dev-checks\`: controlled check và các ca đã chọn. Giải thích nằm trong file `03` của thư mục `huong_dan`.
+Trong `output\experiments\dev-checks\`: controlled check và các ca đã chọn. Giải thích nằm trong file `4_bang_ca_loi` của thư mục `huong_dan`.
 
 ## 5. Chạy lại code
 

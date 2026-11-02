@@ -19,7 +19,10 @@ h1 { font-size: 20pt; line-height: 1.25; margin: 0 0 10pt; color: #17365d; }
 h2 { font-size: 14pt; margin: 18pt 0 6pt; padding-bottom: 3pt; border-bottom: 1px solid #b8c4d6; color: #17365d; break-after: avoid; }
 h3 { font-size: 11.5pt; margin: 12pt 0 4pt; color: #17365d; break-after: avoid; }
 p, ul, ol { margin: 5pt 0; }
-table { width: 100%; border-collapse: collapse; margin: 7pt 0; font-size: 9.5pt; }
+table { width: 100%; border-collapse: collapse; margin: 7pt 0; font-size: 9.5pt; break-inside: avoid; }
+thead { display: table-header-group; }
+p:has(+ table), p:has(+ pre), p:has(+ figure) { break-after: avoid; }
+figure { margin: 8pt 0; break-inside: avoid; }
 tr { break-inside: avoid; }
 th { background: #e8edf4; text-align: left; font-weight: 600; }
 th, td { border: 1px solid #b8c4d6; padding: 3.5pt 5pt; vertical-align: top; }

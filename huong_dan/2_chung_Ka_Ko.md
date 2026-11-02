@@ -1,47 +1,8 @@
 # File chung cho Ka và Ko
 
-**Đọc file này trước, khoảng 1 giờ.** Sau đó Ka đọc file `01`, Ko đọc file `02`, khoảng 2 giờ mỗi bạn.
+**Cả hai đọc file này trước, khoảng 1 giờ.** Đọc từ trên xuống, chưa cần nhớ hết. Sau đó Ka đọc file `3_Ka`, Ko đọc file `3_Ko`.
 
-## 1. Bảng phân công lý tưởng
-
-Đây là cách chia việc lý tưởng cho dự án, **không phải nhật ký** những việc đã diễn ra.
-
-| Hạng mục | Phụ trách | Sản phẩm | Xong khi |
-| --- | --- | --- | --- |
-| Kiểm tra dữ liệu, nhãn, chia tập | Ka | `data_audit.json`, `eda_by_level.csv` | Giải thích được một dòng thật và một rủi ro dữ liệu |
-| Baseline majority, cây AWL | Ka | `awl_tree_rules.txt`, `frozen_selection.json` | Tự dò cây bằng tay trên một câu |
-| Ca bất đồng nhãn, ca cây AWL sai | Ka | Phần 4, 5 của file `03` | Đọc và nói được bằng chứng từng ca |
-| Chạy lại và kiểm chứng kết quả | Ka | `verification.json` | Chạy verify và đọc được kết quả |
-| TF-IDF + LR | Ko | `tfidf_lr.joblib`, `lr_top_coefficients.csv` | Lần theo được một câu ra dự đoán |
-| Thước đo và so sánh | Ko | `test_metrics.csv`, `per_class_test.csv` | Tính tay được một thước đo nhỏ |
-| Controlled check | Ko | `output/experiments/dev-checks/` | Nói được giả định, kết quả, quyết định |
-| Ca lỗi của LR | Ko | Phần 3 của file `03` | Đọc và nói được bằng chứng từng ca |
-| Kết luận và giới hạn | Cả hai | Mục kết luận của báo cáo | Mỗi người tự nói được một giới hạn |
-
-Bảng ca lỗi và controlled check do AI soạn. Nếu thầy hỏi ai làm, hãy trả lời đúng như vậy.
-
-## 2. Buổi phỏng vấn kiểm tra gì
-
-Mỗi người khoảng 6–8 phút, điểm riêng, tối đa 30.
-
-| Tiêu chí | Điểm | Thầy muốn thấy |
-| --- | ---: | --- |
-| Dữ liệu và nhãn | 8 | Mở một câu có ID. Một dòng là gì, nhãn từ đâu, lúc dự đoán biết gì, chia tập ra sao, một rủi ro |
-| Lý do chọn mô hình | 8 | Từ đặc trưng đến dự đoán. Baseline để làm gì. Nếu đổi điều kiện thì sao |
-| Đánh giá và kết quả | 8 | So với baseline, đọc một thước đo, một ca lỗi, một giới hạn, tập test đã dùng thế nào |
-| Đóng góp và kiểm tra thực hành | 6 | Làm hoặc dò một bước nhỏ, tính một thước đo nhỏ, đoán đầu vào đổi thì sao |
-
-**Quy định cần nhớ:**
-
-- Được mở tài liệu và code của mình. **Bạn bè và AI không được nhắc** khi đang phỏng vấn.
-- Được trả lời bằng tiếng Việt, được viết hoặc vẽ.
-- Thầy sẽ đổi ví dụ, nên học thuộc không đủ. Hãy hiểu **cách dò**.
-- "Em chưa đủ bằng chứng để khẳng định, nhưng có thể kiểm tra bằng cách..." là câu trả lời được tính.
-- Không cần huấn luyện lại trên lớp. Thầy có thể dùng kết quả đã lưu.
-
-Mỗi tiêu chí chấm 0, 4, 6 hoặc 8 (tiêu chí cuối: 0, 3, 4,5 hoặc 6). Chỉ đọc thuật ngữ thì được khoảng mức 4. Giải thích đúng một câu thật được mức 6. Nối được các bước và suy luận khi điều kiện đổi được mức 8.
-
-## 3. Dự án trong một trang
+## 1. Dự án trong một trang
 
 **Câu chuyện:** cô giáo tiếng Anh ở HANU có một bài đọc cho lớp B1. Cô muốn biết câu nào có thể khó hơn trình độ lớp để sửa hoặc thay.
 
@@ -65,7 +26,7 @@ dễ nhất                khó nhất
 | Chạy lại và kiểm chứng tự động | Khoảng tin cậy cho hiệu số giữa hai mô hình |
 | Controlled check và bảng ca lỗi (AI soạn) | BiLSTM, giao diện cho giáo viên, thử với giáo viên thật |
 
-## 4. Machine Learning là gì
+## 2. Machine Learning là gì
 
 **Lập trình thường:** bạn viết luật cho máy. Ví dụ: "điểm dưới 4 thì trượt môn."
 
@@ -88,6 +49,8 @@ Bốn từ phải nhớ:
 | Dev | 1.366 | Đề thi thử | Chọn cấu hình tốt nhất |
 | Test | 1.460 | Đề thi thật | Chấm cuối cùng |
 
+<figure><svg viewBox="0 0 680 150" width="100%" role="img" aria-label="Sơ đồ chia train, dev, test" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif"><g stroke="#17365d"><rect x="2" y="26" width="478" height="44" fill="#dbe5f3"/><rect x="480" y="26" width="91" height="44" fill="#fff6e0"/><rect x="571" y="26" width="107" height="44" fill="#f7dfd9"/></g><g font-size="13" font-weight="600" fill="#17365d" text-anchor="middle"><text x="241" y="53">Train: 7.177 câu</text><text x="525" y="53">Dev: 1.366</text><text x="624" y="53">Test: 1.460</text></g><g font-size="12" fill="#333" text-anchor="middle"><text x="241" y="16">Đề cương có đáp án</text><text x="525" y="16">Đề thi thử</text><text x="624" y="16">Đề thi thật</text><text x="241" y="92">Máy học từ đây; IDF cũng chỉ tính ở đây</text><text x="525" y="92">Chọn cấu hình</text><text x="624" y="92">Chấm cuối</text><text x="525" y="108">rồi đóng băng</text><text x="624" y="108">sau khi chốt</text></g><text x="340" y="138" font-size="12" fill="#333" text-anchor="middle">Thứ tự: học trên train → chọn trên dev → đóng băng → chấm trên test. Không chỉnh mô hình theo điểm test.</text></svg></figure>
+
 **Vì sao không gộp lại?** Nếu thi đúng câu đã có trong đề cương, điểm cao chưa chắc đã giỏi. Có thể chỉ là học thuộc. Hiện tượng này gọi là **overfitting** (học thuộc đề cũ, gặp đề mới thì dở). Nếu đề thi lọt vào lúc ôn thì gọi là **rò rỉ** (leakage).
 
 **Tập test đã dùng thế nào:** nhóm chọn xong và đóng băng mô hình bằng dev, rồi mới chấm test. Code từ chối chạy test lần hai trong cùng thư mục. Chạy lại ở thư mục khác cũng không làm test thành "chưa từng thấy", và không được chỉnh mô hình dựa trên điểm test.
@@ -96,7 +59,7 @@ Bốn từ phải nhớ:
 
 Baseline là mốc so sánh đơn giản. Một bài trắc nghiệm mà khoanh bừa toàn C đã được 25%. Nếu bạn ôn cả tuần mà được 26%, bạn chưa giỏi lên bao nhiêu. Vì vậy điểm của mô hình chỉ có nghĩa khi so với mốc.
 
-## 5. Ba mô hình trên một câu thật
+## 3. Ba mô hình trên một câu thật
 
 Câu mẫu: **`score_dev_0045`**: `Here is the area where the computer was .`, nhãn đúng **A2**. Câu này thuộc tập dev, mô hình chưa học nó.
 
@@ -108,13 +71,11 @@ Câu mẫu: **`score_dev_0045`**: `Here is the area where the computer was .`, n
 
 Chuỗi xử lý (pipeline):
 
-```
-Câu → tách từ → đặc trưng → mô hình → 6 xác suất → nhãn → so với đáp án
-```
+<figure><svg viewBox="0 0 680 150" width="100%" role="img" aria-label="Sơ đồ pipeline từ câu đến nhãn" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif"><defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8z" fill="#17365d"/></marker></defs><g fill="#e8edf4" stroke="#17365d"><rect x="2" y="10" width="92" height="46" rx="5"/><rect x="118" y="10" width="92" height="46" rx="5"/><rect x="234" y="10" width="92" height="46" rx="5"/><rect x="350" y="10" width="92" height="46" rx="5"/><rect x="466" y="10" width="92" height="46" rx="5"/><rect x="582" y="10" width="92" height="46" rx="5"/></g><g font-size="13" font-weight="600" fill="#17365d" text-anchor="middle"><text x="48" y="38">Câu</text><text x="164" y="38">Tách từ</text><text x="280" y="38">Đặc trưng</text><text x="396" y="38">Mô hình</text><text x="512" y="38">6 xác suất</text><text x="628" y="38">Nhãn</text></g><g stroke="#17365d" stroke-width="1.5" marker-end="url(#a)"><line x1="94" y1="33" x2="117" y2="33"/><line x1="210" y1="33" x2="233" y2="33"/><line x1="326" y1="33" x2="349" y2="33"/><line x1="442" y1="33" x2="465" y2="33"/><line x1="558" y1="33" x2="581" y2="33"/></g><g font-size="11" fill="#333" text-anchor="middle"><text x="48" y="78">Here is the</text><text x="48" y="93">area where...</text><text x="164" y="78">here, is, the,</text><text x="164" y="93">area, where...</text><text x="280" y="78">area 0,282</text><text x="280" y="93">was 0,176</text><text x="396" y="78">TF-IDF + LR</text><text x="396" y="93">cộng trừ điểm</text><text x="512" y="78">A2 66,3%</text><text x="512" y="93">B1 25,5% ...</text><text x="628" y="78">Đoán A2</text><text x="628" y="93">Đáp án A2: đúng</text></g><text x="340" y="130" font-size="12" fill="#333" text-anchor="middle">Ví dụ thật: câu score_dev_0045 đi qua từng bước</text></svg></figure>
 
 Thử ngay: mở `2_du_doan_mot_cau.bat`, gõ câu trên, xem có ra đúng bảng này không.
 
-## 6. Kết quả chính
+## 4. Kết quả chính
 
 Cả ba mô hình chấm trên cùng 1.460 câu test.
 
@@ -126,6 +87,8 @@ Cả ba mô hình chấm trên cùng 1.460 câu test.
 
 - **QWK:** mức đồng thuận với chuyên gia, lệch càng xa phạt càng nặng. Bằng 0 là không hơn đoán theo may rủi, gần 1 là rất khớp.
 - **MAE:** trung bình lệch bao nhiêu bậc. 0,728 là lệch chưa đến một bậc.
+- **Macro-F1:** điểm trung bình của 6 mức, các mức tính ngang nhau, nên mức hiếm như A1, C2 không bị bỏ qua.
+- **Accuracy:** tỉ lệ đoán trúng chính xác.
 
 **Được phép nói:**
 
@@ -139,6 +102,45 @@ Cả ba mô hình chấm trên cùng 1.460 câu test.
 - "AWL vô dụng." Chỉ kết luận được về cách cài đặt này.
 - "Xác suất 66% nghĩa là chắc chắn 66%." Xác suất chưa được hiệu chỉnh.
 - So trực tiếp với điểm của bài báo gốc. Cách lấy nhãn khác nhau.
+
+## 5. Buổi phỏng vấn kiểm tra gì
+
+Mỗi người khoảng 6–8 phút, điểm riêng, tối đa 30.
+
+| Tiêu chí | Điểm | Thầy muốn thấy |
+| --- | ---: | --- |
+| Dữ liệu và nhãn | 8 | Mở một câu có ID. Một dòng là gì, nhãn từ đâu, lúc dự đoán biết gì, chia tập ra sao, một rủi ro |
+| Lý do chọn mô hình | 8 | Từ đặc trưng đến dự đoán. Baseline để làm gì. Nếu đổi điều kiện thì sao |
+| Đánh giá và kết quả | 8 | So với baseline, đọc một thước đo, một ca lỗi, một giới hạn, tập test đã dùng thế nào |
+| Đóng góp và kiểm tra thực hành | 6 | Làm hoặc dò một bước nhỏ, tính một thước đo nhỏ, đoán đầu vào đổi thì sao |
+
+**Quy định cần nhớ:**
+
+- Được mở tài liệu và code của mình. **Bạn bè và AI không được nhắc** khi đang phỏng vấn.
+- Được trả lời bằng tiếng Việt, được viết hoặc vẽ.
+- Thầy sẽ đổi ví dụ, nên học thuộc không đủ. Hãy hiểu **cách dò**.
+- "Em chưa đủ bằng chứng để khẳng định, nhưng có thể kiểm tra bằng cách..." là câu trả lời được tính.
+- Không cần huấn luyện lại trên lớp. Thầy có thể dùng kết quả đã lưu.
+
+Mỗi tiêu chí chấm 0, 4, 6 hoặc 8 (tiêu chí cuối: 0, 3, 4,5 hoặc 6). Chỉ đọc thuật ngữ thì được khoảng mức 4. Giải thích đúng một câu thật được mức 6. Nối được các bước và suy luận khi điều kiện đổi được mức 8.
+
+## 6. Bảng phân công lý tưởng
+
+Đây là cách chia việc lý tưởng cho dự án, **không phải nhật ký** những việc đã diễn ra. Tên file trong cột "Sản phẩm" là kết quả chạy code; file riêng của mỗi bạn sẽ giải thích dần. Từ nào chưa rõ thì tra mục từ điển ở dưới.
+
+| Hạng mục | Phụ trách | Sản phẩm | Xong khi |
+| --- | --- | --- | --- |
+| Kiểm tra dữ liệu, nhãn, chia tập | Ka | `data_audit.json`, `eda_by_level.csv` | Giải thích được một dòng thật và một rủi ro dữ liệu |
+| Baseline majority, cây AWL | Ka | `awl_tree_rules.txt`, `frozen_selection.json` | Tự dò cây bằng tay trên một câu |
+| Ca bất đồng nhãn, ca cây AWL sai | Ka | Phần 4, 5 của file `4_bang_ca_loi` | Đọc và nói được bằng chứng từng ca |
+| Chạy lại và kiểm chứng kết quả | Ka | `verification.json` | Chạy verify và đọc được kết quả |
+| TF-IDF + LR | Ko | `tfidf_lr.joblib`, `lr_top_coefficients.csv` | Lần theo được một câu ra dự đoán |
+| Thước đo và so sánh | Ko | `test_metrics.csv`, `per_class_test.csv` | Tính tay được một thước đo nhỏ |
+| Controlled check | Ko | `output/experiments/dev-checks/` | Nói được giả định, kết quả, quyết định |
+| Ca lỗi của LR | Ko | Phần 3 của file `4_bang_ca_loi` | Đọc và nói được bằng chứng từng ca |
+| Kết luận và giới hạn | Cả hai | Mục kết luận của báo cáo | Mỗi người tự nói được một giới hạn |
+
+Bảng ca lỗi và controlled check do AI soạn. Nếu thầy hỏi ai làm, hãy trả lời đúng như vậy.
 
 ## 7. Tự kiểm tra
 
@@ -164,6 +166,11 @@ AI giống một bạn học giỏi nhưng đôi lúc nói sai rất tự tin. �
 | Thuật ngữ | Nghĩa |
 | --- | --- |
 | CEFR | Thang trình độ ngoại ngữ A1–C2 |
+| Baseline, majority | Mốc so sánh đơn giản; majority là luôn đoán mức phổ biến nhất |
+| TF-IDF | Cách biến câu thành số: từ càng hiếm càng được tính nặng |
+| Logistic Regression (LR) | Mô hình cộng trừ điểm cho từng từ rồi đổi thành xác suất |
+| Cây quyết định | Mô hình hỏi có hoặc không theo từng bước |
+| Verify | Script tự kiểm tra lại kết quả đã lưu |
 | SCoRE, Wiki-Auto | Hai nguồn câu: câu ví dụ cho người học, và câu Wikipedia |
 | AWL | Academic Word List, danh sách từ học thuật. Không phải thang CEFR |
 | Siêu tham số | Núm chỉnh do người chọn, ví dụ số lá của cây |
@@ -176,7 +183,7 @@ AI giống một bạn học giỏi nhưng đôi lúc nói sai rất tự tin. �
 ## 10. Mang theo khi phỏng vấn
 
 - Laptop đã giải nén gói code, đã bấm thử cả 3 file `.bat`.
-- File `00`, file của mình, file `03`.
+- File `2_chung_Ka_Ko`, file của mình, file `4_bang_ca_loi`.
 - Giấy bút để tính tay và vẽ.
 - **Nếu máy hỏng:** báo thầy ngay, dùng PDF này và tính trên giấy. Rubric cho phép dùng kết quả đã lưu hoặc kiểm tra tương đương.
 

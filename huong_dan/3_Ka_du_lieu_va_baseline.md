@@ -1,13 +1,14 @@
 # File của Ka: dữ liệu và baseline
 
-**Khoảng 2 giờ, đọc sau file `00`.** Mỗi mục có bài tự làm, đáp án ở cuối. Hãy tự làm trước khi xem.
+**Đọc sau file `2_chung_Ka_Ko`, khoảng 2 giờ.** Bạn phụ trách dữ liệu và các mô hình mốc.
 
-**Phần việc của Ka:**
+> **Tối nay bạn cần làm được 3 việc:**
+>
+> 1. Mở một câu thật, nói được nhãn từ đâu, lúc dự đoán biết gì, chia tập thế nào, một rủi ro.
+> 2. Tự dò cây AWL bằng tay trên một câu và tính được MAE của baseline.
+> 3. Bấm kiểm chứng, đọc được kết quả, và kể được một ca bất đồng nhãn.
 
-- Kiểm tra dữ liệu, nhãn, chia tập.
-- Baseline majority và cây AWL.
-- Ca bất đồng nhãn, ca cây AWL sai.
-- Chạy lại và kiểm chứng kết quả.
+Mỗi mục có bài tự làm, đáp án ở cuối. Hãy tự làm trước khi xem.
 
 ## 1. Một dòng dữ liệu là gì (15 phút)
 
@@ -88,7 +89,7 @@ Dự án gặp đúng chuyện đó:
 - Câu A1 trong train: 41/47 câu từ Wiki-Auto. Câu A1 trong test: 33/37 câu từ SCoRE.
 - Đặc trưng A1 mạnh nhất của LR là `died on` và `died`, từ những câu tiểu sử kiểu Wikipedia.
 
-Đây là **giả thuyết hợp lý**, chưa phải nguyên nhân đã chứng minh. Controlled check trong file `03` đã thử và chưa cho thấy cân bằng trọng số là đủ.
+Đây là **giả thuyết hợp lý**, chưa phải nguyên nhân đã chứng minh. Controlled check trong file `4_bang_ca_loi` đã thử và chưa cho thấy cân bằng trọng số là đủ.
 
 Một rủi ro khác: A1 và C2 quá ít. Trong train A1 có 47 câu, C2 có 91 câu. Trong test A1 có 37 câu, C2 có 72 câu.
 
@@ -182,7 +183,7 @@ Cây thử nhiều ngưỡng trên train. Mỗi lần chọn ngưỡng tách cá
 | Mật độ TB (%) | 1,1 | 2,1 | 5,7 | 7,5 | 7,5 | 5,7 |
 | Không có từ AWL (%) | 93,6 | 85,0 | 54,3 | 37,2 | 34,8 | 45,1 |
 
-Gần một nửa câu C2 không có từ AWL nào. Một lý do có thể là từ khó của chúng thường là thuật ngữ chuyên ngành, như các ca trong file `03`.
+Gần một nửa câu C2 không có từ AWL nào. Một lý do có thể là từ khó của chúng thường là thuật ngữ chuyên ngành, như các ca trong file `4_bang_ca_loi`.
 
 **Lý do 2: trọng số `balanced`.** Giống như nhân hệ số cho môn ít tín chỉ để không bị bỏ qua. A1 rất hiếm nên hệ số tới 25,45. Cây vì thế rất muốn đoán A1: trên test đoán A1 cho **836/1.460 câu**, trong khi chỉ có 37 câu A1 thật.
 
@@ -212,7 +213,7 @@ Kết quả đã đóng băng vẫn giữ nguyên và phải nêu đây là gi�
 
 ## 5. Đọc ca và chạy kiểm chứng (20 phút)
 
-Mở phần 4, 5, 6 của file `03`. Đọc từng ca. Tập nói một ca theo khuôn:
+Mở phần 4, 5, 6 của file `4_bang_ca_loi`. Đọc từng ca. Tập nói một ca theo khuôn:
 
 ```
 ID → câu → nhãn → dự đoán → bằng chứng → giải thích → còn chưa chắc gì
@@ -260,7 +261,7 @@ Tự nói thành tiếng, mỗi câu khoảng 1 phút, mở file bằng chứng 
 | Baseline đoán gì cho dòng đó? | B2, vì sao | `frozen_selection.json` |
 | Chọn một giả định. Đổi đi thì sao, kiểm tra thế nào? | max/min, hoặc bỏ `balanced`, so trên dev | `validation_candidates.json` |
 | Một kết quả so với baseline? | Cây QWK hơn nhưng MAE tệ hơn majority | `test_metrics.csv` |
-| Một ca bất đồng nhãn? | Quan sát, giả thuyết, bước tiếp theo | File `03` |
+| Một ca bất đồng nhãn? | Quan sát, giả thuyết, bước tiếp theo | File `4_bang_ca_loi` |
 | Em tự kiểm tra được gì ngay bây giờ? | Tính MAE majority, dò cây, chạy verify | Giấy, `.bat` |
 
 **Hai giới hạn nên tự nói được:** nhãn là ý kiến của chuyên gia và lấy max; không có mã bài nên không loại trừ được rò rỉ mức bài.
