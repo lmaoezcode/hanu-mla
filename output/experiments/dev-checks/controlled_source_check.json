@@ -1,0 +1,65 @@
+{
+  "question": "Does the source imbalance between train and dev weaken LR on SCoRE sentences?",
+  "pre_run_assumption": "Balancing source weights improves QWK and MAE on dev SCoRE and may reduce them on dev Wiki-Auto.",
+  "change": "One factor: sample_weight also balances total SCoRE and Wiki-Auto weight in train.",
+  "fixed": {
+    "C": 10.0,
+    "min_df": 1,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "max_features": 30000,
+    "seed": 20261004
+  },
+  "source_weight": {
+    "SCoRE": 3.0206228956228958,
+    "Wiki-Auto": 0.5991818333611622
+  },
+  "train_counts": {
+    "SCoRE": 1188,
+    "Wiki-Auto": 5989
+  },
+  "test_used": false,
+  "frozen_model_replaced": false,
+  "frozen_lr": {
+    "Tat ca": {
+      "n": 1366,
+      "qwk": 0.622948951280581,
+      "mae": 0.6925329428989752,
+      "macro_f1": 0.31514392987832096
+    },
+    "SCoRE": {
+      "n": 665,
+      "qwk": 0.24409673680340005,
+      "mae": 0.7052631578947368,
+      "macro_f1": 0.1941623565817032
+    },
+    "Wiki-Auto": {
+      "n": 701,
+      "qwk": 0.4829011619003307,
+      "mae": 0.6804564907275321,
+      "macro_f1": 0.3630574333743983
+    }
+  },
+  "source_balanced_lr": {
+    "Tat ca": {
+      "n": 1366,
+      "qwk": 0.6053327220798191,
+      "mae": 0.718887262079063,
+      "macro_f1": 0.3148739554452226
+    },
+    "SCoRE": {
+      "n": 665,
+      "qwk": 0.2227558668778199,
+      "mae": 0.6947368421052632,
+      "macro_f1": 0.21312542085582567
+    },
+    "Wiki-Auto": {
+      "n": 701,
+      "qwk": 0.4405209753403855,
+      "mae": 0.7417974322396577,
+      "macro_f1": 0.3729735778162317
+    }
+  }
+}

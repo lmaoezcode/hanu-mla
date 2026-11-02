@@ -1,0 +1,53 @@
+{
+  "short_sentences_up_to_7_words_lr": {
+    "n": 300,
+    "correct": 117,
+    "predicted_too_high": 98,
+    "predicted_too_low": 85,
+    "mean_signed_error": 0.08666666666666667
+  },
+  "long_sentences_over_15_words_lr": {
+    "n": 345,
+    "correct": 156,
+    "predicted_too_high": 46,
+    "predicted_too_low": 143,
+    "mean_signed_error": -0.34492753623188405
+  },
+  "short_a1_a2_lr": {
+    "n": 125,
+    "correct": 54,
+    "predicted_too_high": 69,
+    "predicted_too_low": 2,
+    "mean_signed_error": 0.696
+  },
+  "short_b2_c1_c2_lr": {
+    "n": 57,
+    "correct": 17,
+    "predicted_too_high": 7,
+    "predicted_too_low": 33,
+    "mean_signed_error": -0.6491228070175439
+  },
+  "c1_c2_unseen_word_share": {
+    "correct_mean": 0.16191905303776807,
+    "too_low_mean": 0.1794220399280212,
+    "correct_n": 91,
+    "too_low_n": 169
+  },
+  "label_disagreement": {
+    "disagree_n": 863,
+    "agree_n": 503,
+    "lr_accuracy_when_disagree": 0.3823870220162225,
+    "lr_accuracy_when_agree": 0.45129224652087474,
+    "lr_matches_either_label_when_disagree": 0.7682502896871379
+  },
+  "tree_zero_awl": {
+    "zero_awl_n": 829,
+    "predicted_a1": 829,
+    "true_a1": 38,
+    "true_b2_or_higher": 306
+  },
+  "dev_counts": {
+    "predicted_a1_by_tree": 829,
+    "true_a1": 40
+  }
+}

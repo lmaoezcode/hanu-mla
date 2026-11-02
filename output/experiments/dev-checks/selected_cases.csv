@@ -1,0 +1,24 @@
+﻿group,id,text,source,annotator_1,annotator_2,target,lr_prediction,lr_probability,tree_prediction,word_count,awl_count,awl_density,top_features_for_lr_prediction
+Ko_loi_LR_lech_2_bac,score_dev_0002,I have two fish in a bowl .,SCoRE,A1,A1,A1,B1,0.439,A1,7,0,0.0,fish +0.59; in +0.11; have two +0.09; two -0.01
+Ko_loi_LR_lech_2_bac,score_dev_0008,A monkey climbed on my shoulders .,SCoRE,A1,A1,A1,B1,0.637,A1,6,0,0.0,monkey +0.69; my +0.41; on my +0.19; climbed -0.03
+Ko_loi_LR_lech_2_bac,score_dev_0084,Can I have a nickel ?,SCoRE,A2,A2,A2,B2,0.481,A1,5,0,0.0,can +0.62; can have +0.28; have +0.08
+Ko_loi_LR_lech_2_bac,score_dev_0169,No birds live in that forest .,SCoRE,A2,A2,A2,B2,0.56,A1,6,0,0.0,live +0.35; forest +0.24; birds +0.24; in that +0.21
+Ko_loi_LR_lech_2_bac,wiki_dev_0054,The innovation that led to flatbread pizza was the use of tomato as a topping .,Wiki-Auto,B1,B1,B1,C1,0.594,C1,15,1,0.0667,of +0.60; led +0.31; use +0.28; to +0.26
+Ko_loi_LR_lech_2_bac,wiki_dev_0143,"Facilities for visitors around the lake include camping areas , picnic areas , toilets and barbecues .",Wiki-Auto,B1,B1,B1,C1,0.384,C1,14,3,0.2143,and +0.66; around +0.44; for +0.36; include +0.18
+Ko_loi_LR_lech_2_bac,score_dev_0580,It is a wonderful tourist spot where you can see the dolphins swim along the coast of Australia .,SCoRE,B1,B2,B2,A2,0.789,A1,18,0,0.0,you +0.77; see +0.43; you can +0.38; it +0.31
+Ko_loi_LR_lech_2_bac,wiki_dev_0363,There are many other variations on male masturbation techniques .,Wiki-Auto,B2,B2,B2,A2,0.442,C1,9,2,0.2222,there +0.86; many other +0.25; there are +0.21; male +0.21
+Ko_loi_LR_lech_2_bac,wiki_dev_0494,Not every poison has an antidote .,Wiki-Auto,B2,C1,C1,A2,0.305,A1,6,0,0.0,every +0.64; has +0.37; has an +0.28; not +0.03
+Ko_loi_LR_lech_2_bac,wiki_dev_0559,"During an instrumental interlude , the music creates a thunder storm to indicate the passage of time .",Wiki-Auto,B2,C1,C1,B1,0.377,C1,16,2,0.125,thunder +0.58; music +0.37; the +0.28; during an +0.15
+Ko_loi_LR_lech_2_bac,wiki_dev_0644,An increase in the number of white blood cells in circulation is called leukocytosis .,Wiki-Auto,C1,C2,C2,B2,0.739,A1,14,0,0.0,the number +0.35; increase +0.32; an +0.29; of +0.26
+Ko_loi_LR_lech_2_bac,wiki_dev_0690,Hummingbirds are specialized nectarivores and are tied to the ornithophilous flowers upon which they feed .,Wiki-Auto,C1,C2,C2,B2,0.649,A1,15,0,0.0,and +0.34; specialized +0.22; to the +0.20; tied +0.19
+Ka_bat_dong_nhan,score_dev_0163,Emma wanted a pink car .,SCoRE,A1,A2,A2,B1,0.479,A1,5,0,0.0,pink +0.77; car +0.56; wanted +0.12
+Ka_bat_dong_nhan,wiki_dev_0073,Mammals are set out by size with largest at the top .,Wiki-Auto,A2,B1,B1,B2,0.427,A1,11,0,0.0,the top +0.33; top +0.29; with +0.27; out +0.24
+Ka_bat_dong_nhan,wiki_dev_0174,English - language anime forums adopted those Japanese-style emoticons that could be used with the standard ASCII characters available on Western keyboards .,Wiki-Auto,B2,B1,B2,B1,0.279,C2,21,1,0.0476,available on +0.22; western +0.21; anime +0.18; language +0.18
+Ka_bat_dong_nhan,score_dev_0662,Those women are Russian gymnasts .,SCoRE,B2,C1,C1,B1,0.711,A1,5,0,0.0,women +0.78; women are +0.68; are -0.05; those -0.20
+Ka_bat_dong_nhan,wiki_dev_0669,"It can sometimes be difficult to distinguish anaphylaxis from asthma , syncope , and panic attacks .",Wiki-Auto,C2,C1,C2,B2,0.591,A1,14,0,0.0,from +0.46; and +0.40; difficult +0.31; can +0.25
+Ka_cay_AWL_sai,score_dev_0009,It 's 10 p. m.,SCoRE,A1,A1,A1,A2,0.723,C1,4,1,0.25,it +1.38; 10 +0.14
+Ka_cay_AWL_sai,score_dev_0120,The movie is Hitchcock 's .,SCoRE,A1,A2,A2,A2,0.605,C1,5,1,0.2,movie +1.57; the movie +0.51; movie is +0.50; is +0.09
+Ka_cay_AWL_sai,score_dev_0408,I feel it necessary to do exercises .,SCoRE,B1,A2,B1,A2,0.845,A1,7,0,0.0,do +0.59; it +0.56; to do +0.48; feel +0.37
+Ka_cay_AWL_sai,wiki_dev_0275,The reason that Specialized was based on Special English is related to their respective usage .,Wiki-Auto,B2,B1,B2,B2,0.74,A1,15,0,0.0,special +0.31; specialized +0.23; their +0.18; is related +0.16
+Ka_cay_AWL_sai,wiki_dev_0476,"Originally , ventriloquism was a religious practice .",Wiki-Auto,C1,C1,C1,B2,0.4,A1,6,0,0.0,religious +0.60; originally +0.08; was +0.06; practice +0.00
+Ka_cay_AWL_sai,wiki_dev_0636,The posterior pituitary is actually an extension of the hypothalamus .,Wiki-Auto,C1,C2,C2,C1,0.87,A1,10,0,0.0,of +0.61; actually +0.52; an +0.45; posterior +0.36
