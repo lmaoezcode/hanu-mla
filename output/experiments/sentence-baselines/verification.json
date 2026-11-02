@@ -1,0 +1,36 @@
+{
+  "checks": {
+    "majority": {
+      "prediction_rows": 1460,
+      "qwk": 0.0,
+      "mae": 0.8938356164383562,
+      "macro_f1": 0.07972902553413236,
+      "passed": true
+    },
+    "awl": {
+      "prediction_rows": 1460,
+      "qwk": 0.24568298861916615,
+      "mae": 1.810958904109589,
+      "macro_f1": 0.07839970071942139,
+      "passed": true
+    },
+    "tfidf_lr": {
+      "prediction_rows": 1460,
+      "qwk": 0.5465978654583852,
+      "mae": 0.7280821917808219,
+      "macro_f1": 0.26567826018059604,
+      "passed": true
+    },
+    "train_only_idf": {
+      "training_records": 7177,
+      "features_checked": 30000,
+      "passed": true
+    },
+    "input_sha256": {
+      "files_checked": 7,
+      "passed": true
+    }
+  },
+  "all_passed": true,
+  "scope": "Independent arithmetic from saved predictions, source hashes, saved-model predictions/probabilities and IDF reconstructed solely from train. No model reselection or refitting."
+}

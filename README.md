@@ -7,10 +7,9 @@ Phân loại độ khó CEFR (A1–C2) cho từng câu tiếng Anh với ba base
 ```
 data/           Dữ liệu gốc (CEFR-SP, Academic Word List)
 scripts/        Script tải dữ liệu, chạy và kiểm tra thí nghiệm
+output/         Kết quả đã lưu của thí nghiệm
 requirements.txt
 ```
-
-Thư mục `output/` được sinh ra khi chạy thí nghiệm và không được đưa lên Git.
 
 ## Chạy thí nghiệm
 
@@ -18,7 +17,15 @@ Thư mục `output/` được sinh ra khi chạy thí nghiệm và không đư�
 python -m venv .venv
 .venv\Scripts\activate
 pip install -r requirements.txt
-python scripts/fetch_awl.py
-python scripts/run_sentence_baselines.py
 python scripts/verify_sentence_baselines.py
+```
+
+Lệnh trên kiểm tra kết quả đã lưu trong `output/experiments/sentence-baselines/`.
+
+Muốn chạy lại từ đầu, dùng một thư mục mới vì script từ chối ghi đè kết quả cũ:
+
+```bash
+python scripts/run_sentence_baselines.py --phase select --output-dir output/experiments/lan-2
+python scripts/run_sentence_baselines.py --phase test --output-dir output/experiments/lan-2
+python scripts/verify_sentence_baselines.py --output-dir output/experiments/lan-2
 ```

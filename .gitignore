@@ -15,5 +15,5 @@ Thumbs.db
 .DS_Store
 .vscode/
 .claude/
-# Generated experiment outputs
-output/
+# Portable bundle (too large for Git)
+dist/

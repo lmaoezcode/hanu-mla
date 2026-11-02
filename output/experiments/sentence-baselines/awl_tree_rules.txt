@@ -1,0 +1,16 @@
+|--- AWL density <= 0.017241
+|   |--- class: 0
+|--- AWL density >  0.017241
+|   |--- AWL density <= 0.081667
+|   |   |--- AWL density <= 0.048810
+|   |   |   |--- class: 5
+|   |   |--- AWL density >  0.048810
+|   |   |   |--- class: 4
+|   |--- AWL density >  0.081667
+|   |   |--- AWL density <= 0.233032
+|   |   |   |--- class: 4
+|   |   |--- AWL density >  0.233032
+|   |   |   |--- AWL density <= 0.270979
+|   |   |   |   |--- class: 4
+|   |   |   |--- AWL density >  0.270979
+|   |   |   |   |--- class: 3

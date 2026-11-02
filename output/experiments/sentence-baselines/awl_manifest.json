@@ -1,0 +1,11 @@
+{
+  "family_count": 570,
+  "distinct_forms": 3111,
+  "extracted_rows": 3113,
+  "family_pdf_sha256": "41c14948c670ff14f5b3a08f033805a8897f73125dac3d78b77b26e2012593ed",
+  "headword_pdf_sha256": "66a54df3d2881921d42704d20e2524c36c2c454fcf3f816170eb06036cf6209b",
+  "family_url": "https://www.wgtn.ac.nz/lals/resources/academicwordlist/publications/awlsublists1.pdf",
+  "headword_url": "https://www.wgtn.ac.nz/lals/resources/academicwordlist/awl-headwords/Headwords-of-the-Academic-Word-List.pdf",
+  "definition": "AWL occurrences / alphabetic word-token count; case-insensitive exact matching against all listed forms, repeated occurrences included; no stemming; hyphenated words count once.",
+  "license_note": "No open license is asserted for the AWL PDFs. Sources are retained for this educational project; check permissions before redistribution."
+}

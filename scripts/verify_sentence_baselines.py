@@ -1,5 +1,6 @@
 """Independent checks of frozen predictions, metrics and train-only TF-IDF."""
 
+import argparse
 import csv
 import hashlib
 import json
@@ -20,6 +21,10 @@ def csv_rows(filename):
 
 
 def main():
+    global OUT
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--output-dir", type=Path, default=OUT)
+    OUT = parser.parse_args().output_dir.resolve()
     results = json.loads((OUT / "test_results.json").read_text(encoding="utf-8"))
     audit = json.loads((OUT / "data_audit.json").read_text(encoding="utf-8"))
     all_rows = csv_rows("audited_sentences.csv")
