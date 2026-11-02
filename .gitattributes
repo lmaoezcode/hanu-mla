@@ -1,3 +1,4 @@
 # Keep data and saved results byte-identical on every platform; verify checks their SHA-256.
 data/** -text
 output/** -text
+*.bat text eol=crlf
