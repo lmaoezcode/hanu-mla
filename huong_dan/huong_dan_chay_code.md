@@ -13,7 +13,7 @@ Nếu Windows hiện "Windows protected your PC", chọn **More info** rồi **R
 
 | File | Khi nào dùng | Mất khoảng |
 | --- | --- | ---: |
-| `1_kiem_tra_ket_qua.bat` | Chứng minh bảng kết quả khớp với dự đoán đã lưu | Vài giây |
+| `1_kiem_tra_ket_qua.bat` | Chứng minh bảng kết quả khớp với dự đoán đã lưu | Dưới 30 giây |
 | `2_du_doan_mot_cau.bat` | Thầy đưa một câu, hoặc đổi một từ để xem dự đoán | Vài giây |
 | `3_chay_lai_tu_dau.bat` | Thầy muốn xem chạy lại toàn bộ | 30 giây đến vài phút |
 
